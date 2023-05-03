@@ -4,9 +4,9 @@
     --primary-color:hsl(354,78%, 60%);
     --body-color:hsl(206, 4%, 97%);
     --text-color: hsl(0, 0%, 20%);
-    --title-color: hsl(0, 0% 10%);
-    --bg-color: hsl(0, 0% 100%);
-    --card-color: hsl(0, 0% 90%);
+    --title-color: hsl(0, 0%, 10%);
+    --bg-color: hsl(0, 0%, 100%);
+    --card-color: hsl(0, 0%, 90%);
 
     --body-font: 'Open Sans', sans-serif;
     --title-font: 'Poppins', sans-serif;
@@ -74,6 +74,7 @@ body{
     font-weight: var(--font-normal);
     color: var(--text-color);
     background-color: var(--body-color);
+    
 }
 
 a{
@@ -117,6 +118,40 @@ button{
     align-items: center;
 }
 
-.loader__container{
-    border: 1px solid green;
+.loader__container samp{
+    display: inline-block;
+    width: var(--sp-3);
+    height: var(--sp-3);
+    background-color: var(--primary-color);
+	border-radius: 50%;
+	animation: loader-09 1.0s infinite ease-in-out;
+}
+
+.loader--hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+
+@keyframes loader-09 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1.0);
+		opacity: 0;
+	}
+}
+
+/*-------------------------Header---------------------------------------*/
+
+.header{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--bg-color);
+    z-index: var(--z-fixed);
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
 }
