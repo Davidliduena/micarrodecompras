@@ -42,20 +42,21 @@
                     <i class='bx bx-x'></i>
                 </button>
 
-            <ul class="nav__list">
-                <li class="nav__items">
-                    <a href="" class="nav__link">Inicio</a>
-                </li>
-                <li class="nav__items">
-                    <a href="" class="nav__link">Productos</a>
-                </li>
-            </ul>
+                <ul class="nav__list">
+                    <li class="nav__items">
+                        <a href="" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="" class="nav__link">Productos</a>
+                    </li>
+                </ul>
             </div>
 
             <div class="nav_buttons">
 
                 <button type="button" class="nav__btn--cart">
                     <i class='bx bx-shopping-bag'></i>
+                    <span class="notify">0</span>
                 </button>
 
                 <button type="button" class="nav__btn--menu">
@@ -65,6 +66,64 @@
             </div>
         </nav>
     </header>
+
+    <!---Main-->
+    <main class="main">
+        <section class="products section">
+            <h2 class="products__title section--title">Productos</h2>
+            <div class="products__container container"></div>
+            <article class="product">
+                <div class="product__image">
+                    <img src="https:/res.cloudinary.com/duu1imwxs/image/upload/v1677270464/eCommerce/shirt1_prckre.png"
+                        alt="Producto 1">
+                </div>
+                <div class="product__content">
+                    <button type="button" class="product__btn add--to--cart">
+                        <i class='bx bx-cart-add'></i>
+                    </button>
+                    <span class="product__price">$10</span>
+                    <span class="product__stock">Disponibles: 3</span>
+                    <h3 class="product__title">Camiseta de manga corta con cuello redondo</h3>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!---footer-->
+    <footer class="footer section">
+        <div class="footer__container container">
+            <div class="footer__top">
+                <div class="footer__left">
+                    <h3 class="footer__title">Sobre nosotros</h3>
+                    <p class="footer__text">Hola mi nombre es David Liduña estoy haciendo la maquetacion sobr un carrito de compras</p>
+                </div>
+                <div class="footer__right">
+                    <h3 class="footer__title">Redes sociales</h3>
+                    <ul class="footer__social">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>     
+            <div class="footer__bottom">
+                <p class="footer_text">Todos los derechos reservados</p>
+            </div>       
+        </div>
+    </footer>
+
 </body>
 
 </html>
