@@ -186,14 +186,14 @@
     @media(max-width: 768px){
         .nav__menu{
             position: fixed;
-            bottom: var(--header-height);
-            left: -100%;
+            bottom: 100%;
+            left: 0%;
             width: 100%;
             height: calc(max-content -var(--header--height));
             padding: var(--sp-3) 0 var(--sp-2);
             background-color: var(--bg-color);
             z-index: var(--z-fixed);
-            transition: left .5s ease-in-out;
+            transition: bottom .3s ease-in-out;
         }
     }
 
@@ -257,7 +257,7 @@
 
     /*-------------------------Show menu---------------------------------------*/
     .show--menu{
-        left: 0;
+        bottom: var(--header--height);
     }
 
     /*-------------------------Productos---------------------------------------*/
