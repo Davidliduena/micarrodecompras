@@ -25,29 +25,30 @@ function cart (db, printProducts){
                 const product = db.find(p => p.id === item.id)
                 htmlcart += `
                 <article class="article">
-                <div class="article article__image">
-                    <img src="${product.imge}" alt="${product.name}">
-                </div>
-                <div class="article article__content">
-                    <h3 class="article__title">${product.name}</h3>
-                    <span class="article__price">${product.price}</span>
-                    <div class="article__quantity">
-                        <button type="button" class="article__quantity-btn article--minus" data-id="${item.id}">
-                            <i class='bx bx-minus'></i>
-                        </button>
-                        <span class="article__quantity-text">${item.qty}</span>
-                        <button type="button" class="article__quantity-btn article--plus" data-id="${item.id}>
-                            <i class='bx bx-plus'></i>
+                    <div class="article article__image">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="article article__content">
+                        <h3 class="article__title">${product.name}</h3>
+                        <span class="article__price">$${product.price}</span>
+                        <div class="article__quantity">
+                            <button data-id ="${item.id}" type="button" class="article__quantity-btn article--minus">
+                                <i class='bx bx-minus'></i>
+                            </button>
+                            <span class="article__quantity-text">${item.qty}</span>
+                            <button data-id = "${item.id}" type="button" class="article__quantity-btn article--plus">
+                                <i class='bx bx-plus'></i>
+                            </button>
+                        </div>
+                        <button data-id = "${item.id}" type="button" class="article__btn remove-from-cart">
+                            <i class='bx bx-trash'></i>
                         </button>
                     </div>
-                    <button type="button" class="article__btn remove-from-cart" data-id="${item.id}>
-                        <i class='bx bx-trash'></i>
-                    </button>
-                </div>
-            </article>
+                </article>
                 `
             }
             notifyDOM.classList.add('show--notify')
+            
         }
 
         cartDOM.innerHTML = htmlcart
@@ -148,7 +149,11 @@ function cart (db, printProducts){
     })
 
     checkoutDOM.addEventListener('click', function (){
+       if(cart.length === 0){
+        alert("No hay productos en el carrito")
+       }else{
         checkout()
+       }
     })
 }
 

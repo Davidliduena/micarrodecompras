@@ -264,7 +264,7 @@
 
     /*-------------------------Show menu---------------------------------------*/
     .show--menu{
-        bottom: var(--header--height);
+        bottom: 0px;
     }
 
     /*-------------------------Productos---------------------------------------*/
@@ -393,17 +393,18 @@
         right: -100%;
         max-width: 375px;
         width: 100%;
-        height: calc(100vh - var(--header--height));
+        height: 100vh;
         background-color: var(--bg-color);
-        z-index: 1000;
+        z-index: var(--z-fixed);
         transition: right .5s ease-in-out;
+        
     }
 
     /*-------------------------show cart---------------------------------------*/
     .show--cart{
         right: 0;
-        opacity: 1;
-        visibility: visible;
+        bottom: 0px;
+        
     }
 
     .cart__container{
@@ -466,6 +467,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+        
     }
 
     .article__content{
