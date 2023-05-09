@@ -1,5 +1,5 @@
 function showCart ( ) {
-    const btnCart = document.querySelector('.cart__btn');
+    const btnCart = document.querySelector('.btn--cart');
     const cart = document.querySelector('.cart');
 
     // console.log(btnCart)

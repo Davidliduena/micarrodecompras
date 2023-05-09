@@ -188,7 +188,7 @@
     @media(max-width: 768px){
         .nav__menu{
             position: fixed;
-            bottom: 100%;
+            bottom: -100%;
             left: 0%;
             width: 100%;
             height: calc(max-content -var(--header--height));
@@ -255,6 +255,11 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    }
+
+    .show--notify{
+        opacity: 1;
+        visibility: visible;
     }
 
     /*-------------------------Show menu---------------------------------------*/
@@ -390,13 +395,15 @@
         width: 100%;
         height: calc(100vh - var(--header--height));
         background-color: var(--bg-color);
-        z-index: var(--z-fixed);
+        z-index: 1000;
         transition: right .5s ease-in-out;
     }
 
     /*-------------------------show cart---------------------------------------*/
     .show--cart{
         right: 0;
+        opacity: 1;
+        visibility: visible;
     }
 
     .cart__container{
