@@ -74,8 +74,9 @@
         font-weight: var(--font-normal);
         color: var(--text-color);
         background-color: var(--body-color);
-        
     }
+
+    /*-------------------------------dark mode--------------------------------*/
 
     a{
         text-decoration: none;
@@ -268,6 +269,11 @@
     }
 
     /*-------------------------Productos---------------------------------------*/
+
+    body.dark{
+        background-color: #4b4550;
+        color: #999;
+    }
     .products__container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -345,22 +351,32 @@
 
     .footer{
         background-color: var(--card-color);
-       
+        margin: auto;
+        }
+    
+    .footer__container{
+        text-align: center;
     }
+
     .footer__container, .footer_top{
         display: grid;
         row-gap: var(--sp-1-5);
-     
         margin: auto;
+    }
+
+    .footer__container p{
+        text-align: justify;
+        padding: 0px 10px;
     }
 
     .footer__title{
         margin-bottom: var(--sp-0-75);
+        font-weight: 1000;
     }
 
     .footer__social{
         display: flex;
-        
+        justify-content: center;
         align-items: center;
         gap: var(--sp-1-5);
     }
@@ -382,9 +398,11 @@
         background-color: var(--primary-color);
     }
 
-    .footer__bottom{
+    .footer__bottom p{
         text-align: center;
     }
+
+    
 
     /*-------------------------Cart---------------------------------------*/
     .cart{
